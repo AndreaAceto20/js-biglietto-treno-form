@@ -11,21 +11,47 @@
 </head>
 <body>
     
-   <form action="">
+   <div class="container ">
+    <div class="row" id="dati">
+           <form action="">
+        <div class="row">
+            
+                <!-- input km -->
+               <div class="col"> 
+                <input type="text" placeholder="inserire numero di kilometri da percorrere" id="km" required>
+            </div>
+                
+                <!-- selettore per età -->
+                <div class="col">
+                    <select id="age" class="form-select">
+                        <option value="">Et&agrave;</option>
+                        <option value="minorenne"> Minorenne </option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over">Over 60</option>
+                    </select>
+                </dic>
+            
+                <button>Invia</button>
+        </div>
+           </form>
+    </div>
+    <div class="row" id="biglietto">    
+            <div class="col">
+                <p>Offerta</p>
+                <p id="tipoBiglietto"></p>
+            </div>
+            <div class="col">
+                <p>Sconto Applicato</p>
+                <p id="scontoBiglietto"></p>
+            </div>
+            <div class="col">
+                <p>Costo Biglietto</p>
+                <p id="costoBiglietto"></p>
+            </div>
+            
 
-    <!-- input km -->
-    <input type="text" placeholder="inserire numero di kilometri da percorrere" id="km">
-    
-    <!-- selettore per età -->
-    <select id="age" class="form-select">
-        <option value="">Et&agrave;</option>
-        <option value="minorenne"> Minorenne </option>
-        <option value="Maggiorenne">Maggiorenne</option>
-        <option value="Over">Over 60</option>
-    </select>
-
-    <button>Invia</button>
-   </form>
+    </div>
+   </div>
 
 
     <script src="./js/script.js"></script>

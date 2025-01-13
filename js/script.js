@@ -7,25 +7,40 @@ const prezzoKm = 0.21;
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
 
-    button.addEventListener('click', () => {
+    
 
         const age = document.getElementById("age").value;
         let km = document.getElementById("km").value;
         let prezzoBiglietto = (km * prezzoKm).toFixed(2);
-        if (age === "Minorenne"){
+        const tipo = document.getElementById("tipoBiglietto");
+        const costo = document.getElementById("costoBiglietto");
+        const discount = document.getElementById("scontoBiglietto");
+        if (age === "minorenne"){
             sconto = 2/10;
             prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * sconto)).toFixed(2);
             console.log(prezzoBiglietto);
-        }else if(age === "Over"){
+            tipo.innerHTML = "Biglietto Ridotto";
+            costo.innerHTML = prezzoBiglietto;
+            discount.innerHTML = (prezzoBiglietto * sconto).toFixed(2);
+            
+
+        }else if(age === "over"){
             sconto = 4/10;
             prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * sconto)).toFixed(2);
             console.log(prezzoBiglietto);
+            tipo.innerHTML = "Biglietto Ridotto";
+            costo.innerHTML = prezzoBiglietto;
+            discount.innerHTML = (prezzoBiglietto * sconto).toFixed(2);
+            
         }else{
             console.log(prezzoBiglietto);
+            tipo.innerHTML = "Biglietto Standard";
+            costo.innerHTML = prezzoBiglietto;
+            discount.innerHTML = (prezzoBiglietto * sconto).toFixed(2);
+           
         }
         
     })
-})
 
 
 
